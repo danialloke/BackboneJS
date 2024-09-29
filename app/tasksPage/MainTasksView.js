@@ -49,6 +49,7 @@ define(['backbone', 'underscore', 'jquery', 'text!./mainTasksTemplate.html', './
 			$("#taskDescription").val("");
 			
 		},
+		
 	});
 	
 	return MainTasksView;

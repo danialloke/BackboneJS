@@ -20,6 +20,19 @@ define(['jquery', 'underscore', 'backbone', 'text!../templates/taskTemplate.html
 			
 		},
 		
+		events: {
+			"click .deleteTask" : "deleteTask",	
+		},
+		
+		deleteTask: function() {
+			event.preventDefault();
+			
+			this.collection.remove(this.model);
+			this.remove();
+			console.log("delete button for model: " + this.model.get('taskName'));
+						
+		},
+		
 	});
 	
 	return TaskModelView;

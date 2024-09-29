@@ -20,6 +20,7 @@ define(['jquery', 'underscore', 'backbone', './TaskModelView'], function($, _, B
 			_.each(self.collection.models, function(model) {
 				var taskModelView = new TaskModelView({
 					model: model,
+					collection: self.collection,
 				});
 				this.$el.append(taskModelView.render().el);
 			}, this);
